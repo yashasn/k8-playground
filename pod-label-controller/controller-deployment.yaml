@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod-label-controller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pod-label-controller
+  template:
+    metadata:
+      labels:
+        app: pod-label-controller
+    spec:
+      containers:
+        - name: controller
+          image: pod-label-controller:latest
+          imagePullPolicy: Never 
