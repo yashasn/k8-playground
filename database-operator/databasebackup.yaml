@@ -1,0 +1,12 @@
+apiVersion: database.example.com/v1alpha1
+kind: DatabaseBackup
+metadata:
+  name: test-backup
+spec:
+  databaseName: redisdb
+  databaseType: redis
+  connectionSecret: redis-credentials
+  storageType: local
+  backupDirectory: /tmp/db_backups/    # Custom backup directory
+  redisAddr: localhost:6379           # Redis service inside the Kubernetes cluster
+  backupInterval: "5m"            # Perform backup every 5 minutes
