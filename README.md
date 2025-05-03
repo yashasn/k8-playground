@@ -1,2 +1,2 @@
 # k8-playground
-This repo for getting better understanding of k8 internals
+Playground repository to dig deeper into K8 internals
